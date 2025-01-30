@@ -3,79 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Menu on Hover</title>
-
-    <style>
-        /* Navbar Styling */
-        .navbar {
-            display: flex;
-            background: #333;
-            padding: 10px 20px;
-        }
-
-        /* Menu Items */
-        .menu {
-            position: relative; /* Needed for dropdown positioning */
-        }
-
-        .menu > a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 15px;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        /* Hover Effect on Menu */
-        .menu > a:hover {
-            background: #f39c12;
-        }
-
-        /* Dropdown Menu (Initially Hidden) */
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: #444;
-            display: none; /* Hidden by default */
-            min-width: 150px;
-        }
-
-        /* Show Dropdown on Hover */
-        .menu:hover .dropdown {
-            display: block;
-        }
-
-        /* Dropdown Items */
-        .dropdown a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        /* Hover Effect on Dropdown Items */
-        .dropdown a:hover {
-            background: #f39c12;
-        }
-    </style>
+    <title>Dropdown from <a> Tag</title>
+    <link rel="stylesheet" href="fakeStyle.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">TOUR</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">MORE<i class="fa fa-caret-down caret-icon"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Destination</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
+                       </ul>
+                    </li>   
+                </ul>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <!-- Dropdown Menu -->
-        <div class="menu">
-            <a href="#">Menu</a>
-            <div class="dropdown">
-                <a href="#">Option 1</a>
-                <a href="#">Option 2</a>
-                <a href="#">Option 3</a>
             </div>
-        </div>
-    </nav>
+            
+            <i class="fa fa-search search-icon"></i>
+            
+        </nav>
+    </header> 
 
 </body>
 </html>
