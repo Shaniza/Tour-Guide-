@@ -1,0 +1,77 @@
+/* body{
+    background-image: url("../career2.avif");
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* display: grid; */
+}
+
+nav{
+    background-color: rgb(171, 152, 152);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.menu > a{
+    color: white;
+    text-decoration: none;
+    padding: 19px;
+}
+
+.menu > a:hover{
+    background-color: grey;
+
+}
+nav > i{
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+
+}
+nav > i:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+
+
+
+footer{
+    height: 200px;
+    width: 100%;
+    color: black;
+    background-color: rgb(206, 206, 206);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+footer .social-icons{
+    padding: 2px;
+
+}
+footer > .social-icons > a{
+    color: black;
+}
+footer > .social-icons > a:hover{
+    color: grey;
+}
