@@ -78,13 +78,113 @@ nav > i:hover{
     background-color: red;
     color: white;
 }
+/* team section  */
+.team-section{
+    background-color: white;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+
  /* book a ticket section  */
 .ticket-section{
     height: 700px;
     width: 100%;
     background-color: black;
     color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
 }
+.ticket-section > h1,i{
+    display: block;
+    text-align: center;
+    
+}
+.table-section{
+    background-color: white;
+    color: grey;
+    margin: 20px;
+    width: 60%;
+
+}
+.table-section > p{
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.table-section > p > span{
+    background-color: black;
+    height: 10px;
+    width: 20px;
+    padding: 5px;
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+.table-section > p > a{
+    background-color: black ;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.frame-section{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.frame {
+    width: 32%;
+    height: 350px;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.img-container1{
+    height: 50%;
+    width: 100%;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipPBM1iEGC60RiD0eBy0bd49pv2A5rnbBSp7emZI=s1360-w1360-h1020');
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text-container1{
+    color: black;
+
+}
+.frame button{
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.frame button:hover{
+    background-color: grey;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +238,7 @@ nav > i:hover{
 
 
 
-
+/* responsive image */
 .responsive-image {
     width: 100%; 
     height: auto;
@@ -169,4 +269,32 @@ footer > .social-icons > a{
 }
 footer > .social-icons > a:hover{
     color: grey;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .table-section{
+        width: 90%;
+    }
+    .frame-section{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+    }
+    .frame{
+        width: 90%;
+        margin-top: 5px;
+
+    }
+    /* .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    } */
 }
