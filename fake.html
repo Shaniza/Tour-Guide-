@@ -3,33 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown from <a> Tag</title>
-    <link rel="stylesheet" href="fakeStyle.css">
+    <title>Simple Dropdown Navbar</title>
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown > a {
+            cursor: pointer;
+        }
+
+        /* Dropdown menu */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            color: black;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">TOUR</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">MORE<i class="fa fa-caret-down caret-icon"></i></a>
-                        <ul class="dropdown">
-                            <li><a href="#">Destination</a></li>
-                            <li><a href="#">Extras</a></li>
-                            <li><a href="#">Media</a></li>
-                       </ul>
-                    </li>   
-                </ul>
 
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <a href="#">Services ▼</a>
+            <div class="dropdown-menu">
+                <a href="#">Web Development</a>
+                <a href="#">SEO</a>
+                <a href="#">Marketing</a>
             </div>
-            
-            <i class="fa fa-search search-icon"></i>
-            
-        </nav>
-    </header> 
+        </div>
+
+        <a href="#">Contact</a>
+    </div>
 
 </body>
 </html>

@@ -3,36 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-ul{
-    list-style: none;
-    background-color: rgb(59, 59, 59);
+
+.menu{
+    background-color: blue;
+    text-align: center;
 }
-ul li{
-    display: inline-block;
-    position: relative;
-}    
-ul li a{
-    display: block;
+.menu a{
     color: white;
-    padding: 20px 25px;
     text-decoration: none;
-    font-size: 18px;
-
+    padding: 10px 20px;
+    cursor: pointer;
 }
-ul li ul.dropdown li{
-    display: block;
 
+.dropdown-container{
+    display: inline;
+    position: relative;
 }
-ul li ul.dropdown{
-    width: 100%;
-    background: white;
+.dropdown-centent{
     position: absolute;
-    z-index: 999;
-    display:none;
+    top: 30px;
+    right: 0px;
+    background-color: blue;
+    text-align: left;
+    min-width: 100px;
+    display: none;
 }
-ul li a:hover{
-    background: yellow;
-}
-ul li:hover ul.dropdown{
+.dropdown-centent a{
     display: block;
 }

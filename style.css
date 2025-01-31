@@ -7,9 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    /* display: grid; */
-}
+
     /* navbar */
 nav{
     background-color: black;
@@ -18,23 +16,57 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.menu{
-    display: flex;
-    font-size: 18px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-.menu > a{
-    color: white;
-    text-decoration: none;
-    padding: 19px;
+.navbar {
+    background-color: black;
+    /* padding: 10px 20px; */
 }
 
-.menu > a:hover{
-    background-color: grey;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    display: inline-block;
 }
-/* search icon */
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a {
+    cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}    
+
 nav > i{
     color: white;
     font-size: 18px;
@@ -46,44 +78,15 @@ nav > i:hover{
     background-color: red;
     color: white;
 }
-/* Dropdown Menu (Initially Hidden) */
-#more{
-    position: relative;
-}
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    display: none; /* Hidden by default */
-    min-width: 150px;
-}
 
-/* Show Dropdown on Hover */
-#more:hover .dropdown {
-    display: block;
-}
+/* #last-picture{
+    height:580px;
+    width: 100%;
+    background-color: #f39c12;
 
-/* Dropdown Items */
-.dropdown a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s;
-}
+} */
 
-/* Hover Effect on Dropdown Items */
-.dropdown a:hover {
-    background: #f39c12;
-}
-
-
-
-
-
-
-
+              /* footer */
 footer{
     height: 200px;
     width: 100%;
