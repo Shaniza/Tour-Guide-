@@ -79,12 +79,13 @@ nav > i:hover{
     color: white;
 }
 
-/* #last-picture{
-    height:580px;
-    width: 100%;
-    background-color: #f39c12;
+.responsive-image {
+    width: 100%; 
+    height: auto;
+    display: block;
+    transition: all 0.3s ease-in-out; 
+}
 
-} */
 
               /* footer */
 footer{

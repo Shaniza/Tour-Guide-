@@ -3,78 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Dropdown Navbar</title>
+    <title>Full-Width Responsive Image</title>
     <style>
-        /* Navbar styling */
-        .navbar {
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for content */
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Make the image take full width and adjust height */
+        .full-width-image {
+            width: 100%;
+            height: auto; /* Ensures aspect ratio is maintained */
+            display: block; /* Removes extra spacing below the image */
+        }
+
+        /* Footer styling */
+        .footer {
             background-color: #333;
-            padding: 10px 20px;
-        }
-
-        .navbar a {
             color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-
-        .navbar a:hover {
-            background-color: #575757;
-        }
-
-        /* Dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown > a {
-            cursor: pointer;
-        }
-
-        /* Dropdown menu */
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 150px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-
-        .dropdown-menu a {
-            color: black;
-            padding: 10px 15px;
-            display: block;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Show dropdown on hover */
-        .dropdown:hover .dropdown-menu {
-            display: block;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        
-        <!-- Dropdown -->
-        <div class="dropdown">
-            <a href="#">Services ▼</a>
-            <div class="dropdown-menu">
-                <a href="#">Web Development</a>
-                <a href="#">SEO</a>
-                <a href="#">Marketing</a>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Welcome to My Responsive Website</h1>
+        <p>The image below will always take full width and adjust its height accordingly.</p>
+    </div>
 
-        <a href="#">Contact</a>
+    <!-- Full-Width Image -->
+    <img class="full-width-image" src="country-road.jpeg" alt="Responsive Image">
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Footer Section - All rights reserved</p>
     </div>
 
 </body>
