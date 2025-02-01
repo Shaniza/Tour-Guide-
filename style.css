@@ -83,7 +83,47 @@ nav > i:hover{
     background-color: white;
     width: 100%;
     height: 500px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
+.about-website{
+    display: grid;
+    justify-content: center;
+}
+
+.about-website h1{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.about-website i{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.about-website p{
+    margin: 40px;
+}
+.guides{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px;
+    
+
+} 
+.guides .guide1{
+    padding: 5px;
+
+}
+.guides .guide1 p{
+    text-align: center;
+}
+.guides > .guide1 img{
+    width: 100%;
+    height: auto;
+} 
+
 
 
 
@@ -158,20 +198,43 @@ nav > i:hover{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.img-container2{
+    height: 50%;
+    width: 100%;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipPBM1iEGC60RiD0eBy0bd49pv2A5rnbBSp7emZI=s1360-w1360-h1020');
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.img-container3{
+    height: 50%;
+    width: 100%;
+    background-image: url('https://lh3.googleusercontent.com/p/AF1QipPBM1iEGC60RiD0eBy0bd49pv2A5rnbBSp7emZI=s1360-w1360-h1020');
+    /* object-fit: contain; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .text-container1{
     color: black;
+    margin-left: 5px;
+
+}
+.text-container1 p{
+    margin: 10px 0;
+    
 
 }
 .frame button{
     background-color: black;
     color: white;
     padding: 5px 10px;
-    margin: 5px;
+    border: none;
 }
 .frame button:hover{
     background-color: grey;
     color: black;
+    border: none;
 }
 
 
@@ -191,6 +254,9 @@ nav > i:hover{
 
 
 /* contact section */
+.contact{
+
+}
 .contact-header{
     text-align: center;
     
@@ -230,7 +296,7 @@ nav > i:hover{
 .form-section > form > button{
     background-color: black;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 8px;
     width: 100px;
 
 }
@@ -289,12 +355,23 @@ footer > .social-icons > a:hover{
         margin-top: 5px;
 
     }
-    /* .container {
+    .team-section{
         flex-direction: column;
         align-items: center;
+        height: auto;
+        padding: 40px;
     }
+    .guides{
+        flex-direction: column;
+        align-items: center;
+        padding: 0 40px;
+    }
+    .contact{
+        height: auto;
+    }
+    .contact-details{
+        flex-direction: column;
+        align-items: center;
+        }
 
-    .box {
-        width: 90%;
-    } */
 }

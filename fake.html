@@ -3,53 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex Column Without Overlap</title>
+    <title>Responsive Centered Text</title>
     <style>
-        /* Parent container */
+        /* Centering Container */
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center boxes horizontally */
-            width: 100%;
-            min-height: auto; /* Allow the container to expand as needed */
-            padding: 20px;
-            background-color: lightgray;
-        }
-
-        /* Individual box */
-        .box {
-            width: 50%;
-            height: 500px;
-            margin-bottom: 10px; /* Space between boxes */
-            background-color: steelblue;
-            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 20px;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
         }
 
-        /* Another section below to check no overlapping */
-        .other-content {
-            width: 100%;
-            height: 100px;
-            background-color: tomato;
-            text-align: center;
-            line-height: 100px;
+        /* Full-Width Text Box */
+        .text-box {
+            width: 60%; /* Occupies 60% of screen */
+            font-size: 2rem; /* Large text */
             font-weight: bold;
-            margin-top: 20px; /* Ensures space below boxes */
+            color: white;
+            background-color: black; /* Full box background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .text-box {
+                width: 80%; /* Wider on small screens */
+                font-size: 20px; /* Reduce font size */
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="box">Box 1</div>
-        <div class="box">Box 2</div>
-        <div class="box">Box 3</div>
+        <div class="text-box">
+            This is a responsive text box that stays in the center!
+        
+            This is a responsive text box that stays in the center!
+        
+            This is a responsive text box that stays in the center!
+        
+            This is a responsive text box that stays in the center!
+        </div>
     </div>
-
-    <div class="other-content">Other Content (No Overlap)</div>
 
 </body>
 </html>
