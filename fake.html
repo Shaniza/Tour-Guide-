@@ -3,48 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Centered Text</title>
+    <title>Full-Screen CSS Slider</title>
     <style>
-        /* Centering Container */
-        .container {
+        /* Reset default margin & padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Prevent scrolling */
+        body {
+            overflow: hidden;
+        }
+
+        /* Full-Screen Slider Container */
+        .slider {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Slides Wrapper */
+        .slides {
+            width: 500vw; /* 5 slides in total (1 → 2 → 3 → 2 → 1) */
+            height: 100%;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Full viewport height */
-            text-align: center;
+            animation: slideAnimation 15s infinite;
+            position: relative;
         }
 
-        /* Full-Width Text Box */
-        .text-box {
-            width: 60%; /* Occupies 60% of screen */
-            font-size: 2rem; /* Large text */
-            font-weight: bold;
+        /* Individual Images */
+        .slides img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .text{
+            width: 100vw;
+            height: 20vh;
+            background-color: rgba(111, 108, 108, 0.5);
+            position: absolute;
+            top: 70vh;
+            left: 0vw;
+            font-size: 50px;
+            letter-spacing: 2px;
             color: white;
-            background-color: black; /* Full box background */
-            padding: 20px;
-            border-radius: 10px;
+            text-align: center;
+
         }
 
-        /* Adjustments for smaller screens */
-        @media (max-width: 768px) {
-            .text-box {
-                width: 80%; /* Wider on small screens */
-                font-size: 20px; /* Reduce font size */
-            }
+        /* Animation Keyframes */
+        @keyframes slideAnimation {
+            0%, 20%   { transform: translateX(0vw); }     /* Image 1 */
+            25%, 40%  { transform: translateX(-100vw); }  /* Image 2 */
+            45%, 60%  { transform: translateX(-200vw); }  /* Image 3 */
+            65%, 80%  { transform: translateX(-100vw); }  /* Back to Image 2 */
+            85%, 100% { transform: translateX(0vw); }     /* Back to Image 1 */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="text-box">
-            This is a responsive text box that stays in the center!
-        
-            This is a responsive text box that stays in the center!
-        
-            This is a responsive text box that stays in the center!
-        
-            This is a responsive text box that stays in the center!
+    <div class="slider">
+        <div class="slides">
+            <img src="1.jpeg" alt="Image 1">
+            <img src="2.jpeg" alt="Image 2">
+            <img src="3.jpeg" alt="Image 3">
+            <img src="2.jpeg" alt="Image 2 Again">
+            <img src="1.jpeg" alt="Image 1 Again">
+        </div>
+        <div class="text">
+            <h1>TOUR PLANNER</h1>
         </div>
     </div>
 
